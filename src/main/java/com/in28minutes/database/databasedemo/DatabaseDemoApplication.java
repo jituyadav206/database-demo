@@ -23,5 +23,7 @@ public class DatabaseDemoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		logger.info("All users -> {}",dao.findAll());
+		logger.info("user id 1001 -> {}",dao.findById(1001));
+
 	}
 }
