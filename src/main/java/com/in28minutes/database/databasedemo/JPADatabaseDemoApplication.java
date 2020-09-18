@@ -29,8 +29,8 @@ public class JPADatabaseDemoApplication implements CommandLineRunner {
 		//logger.info("All users -> {}",dao.findAllCustomRowMapper());
 		logger.info("user id 1001 -> {}",repository.findById(1001));
 		//logger.info("deleting 1002 -> No of row deleted- {}",dao.deleteById(1002));
-		//logger.info("Inserting 1004-> {}", dao.insert(new Person(1004,"Dola","Khagaria",new Date())));
-		//logger.info("Updating 1003-> {}", dao.update(new Person(1003, "Anurag","Bangalore",new Date())));
+		logger.info("Inserting ", repository.insert(new Person("Dola","Khagaria",new Date())));
+		logger.info("Updating 1003-> {}", repository.update(new Person(1003, "Anurag","Bangalore",new Date())));
 
 
 	}
