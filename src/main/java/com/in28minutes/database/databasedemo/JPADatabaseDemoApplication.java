@@ -26,12 +26,11 @@ public class JPADatabaseDemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		//logger.info("All users -> {}",dao.findAllCustomRowMapper());
+		logger.info("All users -> {}",repository.findAll());
 		logger.info("user id 1001 -> {}",repository.findById(1001));
-		//logger.info("deleting 1002 -> No of row deleted- {}",dao.deleteById(1002));
 		logger.info("Inserting ", repository.insert(new Person("Dola","Khagaria",new Date())));
 		logger.info("Updating 1003-> {}", repository.update(new Person(1003, "Anurag","Bangalore",new Date())));
-
+		repository.deleteById(1002);
 
 	}
 }
